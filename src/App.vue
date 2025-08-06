@@ -1,51 +1,59 @@
 <template>
-  <Header/>
-  <PrimeiroComponente/>
-  <h2 class="paragrafo-pai">O dado de app é: {{ mensagem }}</h2>
-  <LifeCycle/>
-  <Pessoa/>
+      <div id="app-container">
+        <Navbar :logo="logo_src" :alt="app_name"/>
+        <main>
+          <RouterView/>
+        </main>
+        <Footer/>
+      </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
-import PrimeiroComponente from './components/PrimeiroComponente.vue'
-import LifeCycle from './components/LifeCycle.vue'
-import Pessoa from './components/Pessoa.vue';
+import Navbar from './components/Navbar.vue';
+import Footer from './components/Footer.vue';
 
 export default {
-  name: 'App',
+
   components: {
-    Header,
-    PrimeiroComponente,
-    LifeCycle,
-    Pessoa
+    Navbar,
+    Footer
   },
-  data() {
-    return {
-      mensagem: 'Bem-vindo ao meu projeto Vue!'
+  data(){
+    return  {
+      logo_src: "/img/logo.png"
     }
-
   }
-
-}
- 
+  
+  }
 </script>
 
 <style>
-  body{
-    background-color: #333;
-    color: #fff;
+  *  {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
   }
 
-  a{
-    color: red;
+  #app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
 
-  .teste{
-    background-color: #000;
+  main {
+    flex: 1;
   }
 
-  .paragrafo-pai{
-    color: blue;
+  .main-container {
+    margin: 50px;
+    min-height: 250px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+    color: #222;
   }
 </style>
