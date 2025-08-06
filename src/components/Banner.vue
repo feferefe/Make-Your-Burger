@@ -10,28 +10,15 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style>
     #main-banner {
-        position: relative;
-        overflow: hidden; 
+        background-image: url('/img/burger.jpg');
+        background-position: 0 -250px;
+        background-size: cover;
         height: 500px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
-    }
-
-    #main-banner::before {
-        content: ''; 
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('/img/burger.jpg');
-        background-size: cover;
-        z-index: -1; 
-        transition: transform 0.4s ease-out;
     }
 
     #main-banner h1{
@@ -39,6 +26,7 @@ export default {
         text-align: center;
         font-size: 60px;
         background-color: #222;
-    }
+        padding: 20px 40px;
 
+    }
 </style>
