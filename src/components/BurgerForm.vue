@@ -35,6 +35,7 @@
 </template>
 
 <script>
+import Message from './Message.vue'
 export default {
     name: "BurgerForm",
     data() {
@@ -72,7 +73,7 @@ export default {
             status: "Solicitado"
         }
 
-            const dataJson = JSON.stringfy(data);
+            const dataJson = JSON.stringify(data);
 
             const req = await fetch("http://localhost:3000/burgers", {
             method: "POST",
@@ -82,13 +83,26 @@ export default {
 
             const res = await req.json()
 
-            console.log(res);
+            // Colocar mensagem no sistema 
+            this.msg = `Pedido N° ${res.id} realizado com sucesso!`
+
+            // Limpar msg
+            setTimeout(() => this.msg = "", 3000);
+
+            // Limpar o nome
+            this.nome = "";
+            this.pao= "";
+            this.carne= "";
+            this.opcionais= "";
 
         }
     },
     mounted() {
         this.getIngredientes();
 
+    },
+    components: {
+      Message
     }
 
 }
