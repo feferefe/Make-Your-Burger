@@ -88,51 +88,6 @@
         "Salame"
       ],
       "status": "Solicitado"
-    },
-    {
-      "id": "2",
-      "nome": "FERNANDA",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "3",
-      "nome": "Fernanda",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Bacon",
-        "Salame"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "4",
-      "nome": "FERNANDA",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Pepino",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado"
-    },
-    {
-      "id": "f693",
-      "nome": "Olivia",
-      "carne": "Veggie burger",
-      "pao": "Integral",
-      "opcionais": [
-        "Pepino",
-        "Tomate",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado"
     }
   ]
 }
