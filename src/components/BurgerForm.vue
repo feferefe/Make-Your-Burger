@@ -53,7 +53,7 @@ export default {
     },
     methods: {
         async getIngredientes() {
-            const req = await fetch("https://make-your-burger-api.onrender.com");
+            const req = await fetch("https://make-your-burger-api.onrender.com/ingredientes");
             const data = await req.json();
             
             this.paes = data.paes;
@@ -75,7 +75,7 @@ export default {
 
             const dataJson = JSON.stringify(data);
 
-            const req = await fetch("https://make-your-burger-api.onrender.com", {
+            const req = await fetch("https://make-your-burger-api.onrender.com/burgers", {
             method: "POST",
             headers: {"Content-Type":"application/json"},
             body: dataJson
