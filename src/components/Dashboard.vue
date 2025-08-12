@@ -53,7 +53,7 @@ export default {
     methods: {
         async getPedidos() {
 
-            const req = await fetch("http://localhost:3000/burgers")
+            const req = await fetch("https://make-your-burger-api.onrender.com")
 
             const data = await req.json();
 
@@ -68,7 +68,7 @@ export default {
        },
        async getStatus() {
 
-        const req = await fetch("http://localhost:3000/status");
+        const req = await fetch("https://make-your-burger-api.onrender.com");
 
         const data = await req.json()
 
@@ -77,7 +77,7 @@ export default {
        },
        async deleteBurger(id) {
 
-        const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+        const req = await fetch(`https://make-your-burger-api.onrender.com/${id}`, {
             method: "DELETE"
         })
 
@@ -98,7 +98,7 @@ export default {
 
         const dataJson = JSON.stringify({ status: option });
 
-        const req = await fetch(`http://localhost:3000/burgers/${id}`, {
+        const req = await fetch(`https://make-your-burger-api.onrender.com/${id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: dataJson
