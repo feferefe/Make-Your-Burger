@@ -65,6 +65,13 @@ export default {
 
         e.preventDefault();
 
+        // Validação dos campos obrigatórios
+        if (!this.nome || !this.pao || !this.carne) {
+          this.msg = "Por favor, preencha nome, pão e carne para continuar!";
+          setTimeout(() => this.msg = "", 3000);
+          return; 
+        }
+
         const data = {
             nome: this.nome,
             carne: this.carne,
